@@ -1,0 +1,10 @@
+{% if all_community %}
+	<h3> Here are all my Communities</h3>
+	<ul>
+		{% for community in all_community %}
+			<li><a href = "/community/{{community.id}}/"> {{community.name}}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<h3> You don't have any Communities </h3>
+{% endif %}
