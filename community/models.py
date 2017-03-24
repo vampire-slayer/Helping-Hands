@@ -4,6 +4,9 @@ class Community(models.Model):
 	name = models.CharField(max_length=250)
 	member = models.CharField(max_length=250)
 	logo = models.CharField(max_length=250)
+	def __str__(self):
+		return self.name
+
 
 class Members(models.Model):
 	community = models.ForeignKey(Community, on_delete=models.CASCADE)
